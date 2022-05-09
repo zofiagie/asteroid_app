@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bcg"
+    android:orientation="vertical"
+    tools:context=".MenuActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alfa_slab_one"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/colorIntro"
+                android:textSize="28sp">
+
+            </TextView>
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:background="@drawable/border"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/stone_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/coustard"
+                    android:text="Diameter"
+                    android:textColor="@color/colorIntro"
+                    android:textSize="22sp" />
+
+
+                <ImageView
+                    android:id="@+id/stone_image"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_above="@+id/stone_bottom"
+                    android:layout_below="@+id/stone_top"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/stone" />
+
+                <LinearLayout
+                    android:id="@+id/stone_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/diameter_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/coustard"
+                            android:inputType="number"
+                            android:textColor="@color/colorIntro"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/coustard"
+                            android:text=" m"
+                            android:textColor="@color/colorIntro"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+
+                    <SeekBar
+                        android:id="@+id/diameterSeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="20000"
+                        android:min="20"
+                        android:progress="10"
+                        android:progressDrawable="@drawable/seek_bar_style"
+                        android:thumb="@drawable/custom_thumb" />
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        app:justifyContent="space_between">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/coustard"
+                            android:text="20 m"
+                            android:textColor="@color/colorIntro"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/coustard"
+                            android:text="20 km"
+                            android:textColor="@color/colorIntro"
+                            android:textSize="18sp" />
+                    </com.google.android.flexbox.FlexboxLayout>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/coustard"
+                    android:text="Velocity"
+                    android:textColor="@color/colorIntro"
+                    android:textSize="22sp" />
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/ic_speedometer"
+                    app:tint="@color/colorWhite" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/velocity_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/coustard"
+                        android:inputType="number"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:text=" km/s"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+
+                <SeekBar
+                    android:id="@+id/velocitySeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="25"
+                    android:min="5"
+                    android:progress="1"
+                    android:progressDrawable="@drawable/seek_bar_style"
+                    android:thumb="@drawable/custom_thumb" />
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    app:justifyContent="space_between">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:text="5 km/s"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:text="25 km/s"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp" />
+                </com.google.android.flexbox.FlexboxLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/coustard"
+                    android:text="Angle"
+                    android:textColor="@color/colorIntro"
+                    android:textSize="22sp" />
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/ic_angle"
+                    app:tint="@color/colorWhite" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/angle_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/coustard"
+                        android:inputType="number"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/angle_supscript"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+
+                <SeekBar
+                    android:id="@+id/angleSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="90"
+                    android:min="5"
+                    android:progress="1"
+                    android:progressDrawable="@drawable/seek_bar_style"
+                    android:thumb="@drawable/custom_thumb" />
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    app:justifyContent="space_between">
+
+                    <TextView
+                        android:id="@+id/angle_min_range_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/angle_max_range_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp" />
+                </com.google.android.flexbox.FlexboxLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="22dp"
+                    android:fontFamily="@font/coustard"
+                    android:text="Density"
+                    android:textColor="@color/colorIntro"
+                    android:textSize="22sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/coustard"
+                    android:text="Projectile density"
+                    android:textColor="@color/colorIntro"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/density_spinner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/spinner_bcg" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/coustard"
+                    android:text="Target type"
+                    android:textColor="@color/colorIntro"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/density_spinner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/spinner_bcg" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/coustard"
+                    android:text="Entery the atmosphere"
+                    android:textColor="@color/colorIntro"
+                    android:textSize="22sp" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/ic_black_placeholder_variant"
+                    app:tint="@color/colorWhite" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/coustard"
+                    android:text="longitude"
+                    android:textColor="@color/colorIntro"
+                    android:textSize="18sp" />
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="15dp"
+                    app:alignItems="center"
+                    app:justifyContent="flex_start">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_flexBasisPercent="25%">
+
+                        <EditText
+                            android:id="@+id/longitude_degree_edit_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/coustard"
+                            android:inputType="number"
+                            android:text="21"
+                            android:textColor="@color/colorIntro"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/longitude_degree_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/coustard"
+                            android:textColor="@color/colorIntro"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_flexBasisPercent="25%">
+
+                        <EditText
+                            android:id="@+id/longitude_minute_edit_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/coustard"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textColor="@color/colorIntro"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/longitude_minute_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/coustard"
+                            android:text="'"
+                            android:textColor="@color/colorIntro"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_flexBasisPercent="25%">
+
+                        <EditText
+                            android:id="@+id/longitude_second_edit_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/coustard"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textColor="@color/colorIntro"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/longitude_second_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/coustard"
+                            android:text="''"
+                            android:textColor="@color/colorIntro"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <Spinner
+                        android:id="@+id/longitude_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/spinner_bcg"
+                        app:layout_flexBasisPercent="15%" />
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/coustard"
+                    android:text="latitude"
+                    android:textColor="@color/colorIntro"
+                    android:textSize="18sp" />
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    app:alignItems="center"
+                    app:justifyContent="flex_start">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_flexBasisPercent="25%">
+
+                        <EditText
+                            android:id="@+id/latitude_degree_edit_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/coustard"
+                            android:inputType="number"
+                            android:text="52"
+                            android:textColor="@color/colorIntro"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/latitude_degree_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/coustard"
+                            android:textColor="@color/colorIntro"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_flexBasisPercent="25%">
+
+                        <EditText
+                            android:id="@+id/latitude_minute_edit_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/coustard"
+                            android:inputType="number"
+                            android:text="13"
+                            android:textColor="@color/colorIntro"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/latitude_minute_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/coustard"
+                            android:text="'"
+                            android:textColor="@color/colorIntro"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_flexBasisPercent="25%">
+
+                        <EditText
+                            android:id="@+id/latitude_second_edit_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/coustard"
+                            android:inputType="number"
+                            android:text="0"
+                            android:textColor="@color/colorIntro"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/latitude_second_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/coustard"
+                            android:text="''"
+                            android:textColor="@color/colorIntro"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <Spinner
+                        android:id="@+id/latitude_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/spinner_bcg"
+                        app:layout_flexBasisPercent="15%" />
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="@font/coustard"
+                    android:text="Flight direction"
+                    android:textColor="@color/colorIntro"
+                    android:textSize="22sp" />
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="30dp"
+                    android:src="@drawable/ic_compass"
+                    app:tint="@color/colorWhite" />
+
+
+                <Spinner
+                    android:id="@+id/direction_spinner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:background="@drawable/spinner_bcg" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/coustard"
+                android:onClick="openResultActivity"
+                android:text="Boom!"
+                android:textColor="@color/colorBlack"
+                android:textSize="26sp" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

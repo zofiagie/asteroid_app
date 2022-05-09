@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bcg"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="380dp"
+                android:background="@drawable/border"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/coustard"
+                    android:text="Initial variables"
+                    android:textColor="@color/colorIntro"
+                    android:textSize="22sp" />
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:justifyContent="space_between"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:text="Diameter: [m]"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/data_layout_initial_diameter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp" />
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:justifyContent="space_between"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:text="Mass: [kg]"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/data_layout_initial_mass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp" />
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:justifyContent="space_between"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:text="Velocity: [km/s]"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/data_layout_initial_velocity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp" />
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:justifyContent="space_between"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:text="Angle: [degree]"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/data_layout_initial_angle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp" />
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:justifyContent="space_between"
+                    android:layout_marginTop="10dp"
+                    app:alignItems="center">
+
+                    <TextView
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:text="Projectile density: [kg/m3]"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/data_layout_initial_projectile_density"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp"
+                        android:textAlignment="viewEnd"/>
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:justifyContent="space_between"
+                    android:layout_marginTop="10dp"
+                    app:alignItems="center">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:text="Target density:  [kg/m3]"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp"
+                        android:layout_marginEnd="10dp"/>
+
+                    <TextView
+                        android:id="@+id/data_layout_initial_target_density"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp"
+                        android:textAlignment="viewEnd"/>
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="265dp"
+                android:background="@drawable/border"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/coustard"
+                    android:text="Results"
+                    android:textColor="@color/colorIntro"
+                    android:textSize="22sp" />
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:justifyContent="space_between"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:text="Diameter: [m]"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/data_layout_result_diameter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp" />
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:justifyContent="space_between"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:text="Mass: [kg]"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/data_layout_result_mass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp" />
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:justifyContent="space_between"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:text="Velocity: [km/s]"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/data_layout_result_velocity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp" />
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:justifyContent="space_between"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:text="Angle: [degree]"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/data_layout_result_angle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp" />
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:justifyContent="space_between"
+                    android:layout_marginTop="10dp"
+                    app:alignItems="center">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:text="Crater diameter: [m]"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/data_layout_result_crater_diameter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp" />
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="470dp"
+                android:background="@drawable/border"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/coustard"
+                    android:text="Legend"
+                    android:textColor="@color/colorIntro"
+                    android:textSize="22sp" />
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:justifyContent="space_between"
+                    android:layout_marginTop="10dp"
+                    app:alignItems="center">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="55dp"
+                        android:background="@color/colorRed"/>
+
+                    <TextView
+                        android:id="@+id/data_layout_result_impact_legend_1"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp"
+                        android:textAlignment="viewEnd"/>
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:justifyContent="space_between"
+                    android:layout_marginTop="10dp"
+                    app:alignItems="center">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="55dp"
+                        android:background="@color/colorMagenta"/>
+
+                    <TextView
+                        android:id="@+id/data_layout_result_impact_legend_2"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp"
+                        android:textAlignment="viewEnd"/>
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:justifyContent="space_between"
+                    android:layout_marginTop="10dp"
+                    app:alignItems="center">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="55dp"
+                        android:background="@color/colorBlue"/>
+
+                    <TextView
+                        android:id="@+id/data_layout_result_impact_legend_3"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp"
+                        android:textAlignment="viewEnd"/>
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:justifyContent="space_between"
+                    android:layout_marginTop="10dp"
+                    app:alignItems="center">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="55dp"
+                        android:background="@color/colorCyan"/>
+
+                    <TextView
+                        android:id="@+id/data_layout_result_impact_legend_4"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp"
+                        android:textAlignment="viewEnd"/>
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:justifyContent="space_between"
+                    android:layout_marginTop="10dp"
+                    app:alignItems="center">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="55dp"
+                        android:background="@color/colorGreen"/>
+
+                    <TextView
+                        android:id="@+id/data_layout_result_impact_legend_5"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp"
+                        android:textAlignment="viewEnd"/>
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:justifyContent="space_between"
+                    android:layout_marginTop="10dp"
+                    app:alignItems="center">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="55dp"
+                        android:background="@color/colorGray"/>
+
+                    <TextView
+                        android:id="@+id/data_layout_result_impact_legend_6"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/coustard"
+                        android:textColor="@color/colorIntro"
+                        android:textSize="18sp"
+                        android:textAlignment="viewEnd"
+                        android:text="crater"/>
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
