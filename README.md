@@ -11,6 +11,6 @@ equations.
 
 
 You can download Android phone app here: [asteroid_app](https://drive.google.com/drive/folders/1xPgToP3iE9_nx0g5UZyCbaDsJfDY0Xvj?usp=sharing)
-or just see screenshots from the application in the screenshots directory.
+or just see screenshots from the application in the screenshots here: [screenshots](https://drive.google.com/drive/folders/1089BRcunnVFSJ9yCMbymDHhjSBudgT_l?usp=sharing).
 
 Authors: Szymon Awruk, Zofia Gluma
